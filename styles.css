@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #3a4764;
+  font: 700 32px 'Spartan', sans-serif;
+}
+
+.container-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+  width: 90%;
+  height: 90%;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.logo {
+  color: #fff;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  background: #232c43;
+  border: none;
+  border-radius: 25px;
+  height: 24px;
+  width: 60px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #d03f2f;
+}
+
+label {
+  color: #fff;
+  display: flex;
+  font: 700 10px 'Spartan', sans-serif;
+  justify-content: space-between;
+  padding: 0 8px;
+  position: absolute;
+  width: 60px;
+  right: 0;
+  top: -16px;
+}
+
+.theme-toggle {
+  position: relative;
+}
+
+.theme-toggle::before {
+  color: #fff;
+  content: "THEME";
+  font: 700 12px 'Spartan', sans-serif;
+  letter-spacing: 2px;
+  vertical-align: middle;
+}
+
+.display{
+  background-color: #182034;
+  border-radius: 12px;
+  color: #fff;
+  padding: 24px 16px;
+  margin-bottom: 24px;
+  text-align: right;
+  width: 100%;
+  min-height: 90px;
+}
+
+.numpad {
+  background-color: #232c43;
+  border-radius: 12px;
+  padding: 24px;
+  display: grid;
+  grid-template: repeat(5, 1fr)/repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.numpad div {
+  position: relative;
+  background-color: #eae3dc;
+  border-radius: 8px;
+  box-shadow: 0 4px 0 hsl(28, 16%, 65%);
+  color: #444b5a;
+  font-size: 24px;
+  padding: 20px 20px 16px;
+  text-align: center;
+}
+
+input[type=range]:hover, .numpad div:hover{
+  cursor: pointer;
+}
+
+.numpad .del, .numpad .reset {
+  background-color: #637097;
+  box-shadow: 0 4px 0 #404e72;
+  color: #fff;
+  font-size: 24px;
+  padding: 20px 20px 16px;
+  font-weight: bold;
+}
+
+.numpad .equal-to {
+  background-color: #d03f2f;
+  box-shadow: 0 4px 0 hsl(6, 70%, 34%);
+  color: #fff;
+  grid-column-end: 5;
+  grid-column-start: 3;
+}
+
+.numpad .reset {
+  grid-column-end: 3;
+  grid-column-start: 1;
+}
+
+/***********************
+        THEME 2
+************************/
+.theme-2 {
+  background-color: hsl(0, 0%, 90%);
+}
+
+.theme-2 .logo, .theme-2 label, .theme-2 .theme-toggle::before, .numpad div {
+  color: hsl(60, 10%, 19%);
+}
+
+.theme-2 .display {
+  background: hsl(0, 0%, 93%);
+  color: hsl(60, 10%, 19%);
+}
+
+.theme-2 input[type=range], .theme-2 .numpad {
+  background: hsl(0, 5%, 81%);
+}
+
+.theme-2 input[type=range]::-webkit-slider-thumb {
+  background: hsl(25, 98%, 40%);
+}
+
+.theme-2 .numpad div {
+  background: hsl(45, 7%, 89%);
+  box-shadow: 0 4px 0 hsl(35, 11%, 61%);
+}
+
+.theme-2 .numpad .equal-to {
+  background: hsl(25, 98%, 40%);
+  box-shadow: 0 4px 0 hsl(25, 99%, 27%);
+}
+
+.theme-2 .numpad .del, .theme-2 .numpad .reset {
+  background: hsl(185, 42%, 37%);
+  box-shadow: 0 4px 0 hsl(185, 58%, 25%);
+}
+
+/***********************
+        THEME 3
+************************/
+.theme-3 {
+  background-color: hsl(268, 75%, 9%);
+}
+
+.theme-3 .logo, .theme-3 label, .theme-3 .theme-toggle::before, .theme-3 .numpad div {
+  color: hsl(52, 100%, 62%);
+}
+
+.theme-3 .display {
+  background: hsl(268, 71%, 12%);
+  color: hsl(52, 100%, 62%);
+}
+
+.theme-3 input[type=range], .theme-3 .numpad {
+  background: hsl(268, 71%, 12%);
+}
+
+.theme-3 input[type=range]::-webkit-slider-thumb {
+  background: hsl(176, 100%, 44%);
+}
+
+.theme-3 .numpad div {
+  background: hsl(268, 47%, 21%);
+  box-shadow: 0 4px 0 hsl(290, 70%, 36%);
+}
+
+.theme-3 .numpad .equal-to {
+  background: hsl(176, 100%, 44%);
+  box-shadow: 0 4px 0 hsl(177, 92%, 70%);
+  color: hsl(198, 20%, 13%);
+}
+
+.theme-3 .numpad .del, .theme-3 .numpad .reset {
+  background: hsl(281, 89%, 26%);
+  box-shadow: 0 4px 0 hsl(285, 91%, 52%);
+}
+
+
+@media screen and (max-width: 415px) {
+  .numpad{
+    padding: 20px;
+    grid-gap: 16px;
+  }
+
+  .numpad div, .numpad .del, .numpad .reset {
+    font-size: 16px;
+    padding: 20px 16px;
+  }
+
+  .head, .display{
+    margin-bottom: 16px;
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+  .head{
+    margin-bottom: 8px;
+  }
+
+  .display{
+    min-height: 80px;
+    padding: 20px 16px;
+  }
+
+  .numpad{
+    padding: 16px;
+    grid-gap: 16px;
+  }
+
+  .numpad div {
+    font-size: 16px;
+    padding: 20px 12px 0;
+  }
+
+  .numpad .del, .numpad .reset {
+    font-size: 12px;
+    padding: 20px 12px 0;
+  }
+}
