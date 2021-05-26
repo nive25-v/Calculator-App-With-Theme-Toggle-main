@@ -7,7 +7,6 @@ Table of contents
 	Overview
 	
 		* The challenge
-		* Screenshot
 		* Links
 	My process
 	
